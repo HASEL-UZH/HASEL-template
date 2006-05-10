@@ -18,15 +18,15 @@
 	\normalsize{Department of Informatics}}%
   }
 \def\@ifilogoklein{%
-  \parbox[c]{50mm}{\includegraphics[width=5cm]{/Users/beat/Library/texmf/tex/seal_templates/seal_thesis/logo_inf}
+  \parbox[c]{50mm}{\includegraphics[width=5cm]{/Users/beat/Library/texmf/tex/latex_templates/logo_inf}
   }}
 \def\@ifiaddr{%
   \parbox[t]{50mm}{%
     \fontfamily{pfr}\selectfont%
     \small\raggedleft%
     ~\\[15mm]
-    Winterthurerstr. 190\\
-    CH-8057 \@ifiplace\\
+    Binzm\"uhlestrasse 14 \\
+    CH-8050 Z\"urich-Oerlikon\\
     Switzerland \\
     \vspace{5mm}
     \textbf{Prof. Dr. Harald C. Gall}\\

@@ -6,7 +6,6 @@
 \ProvidesPackage{seal}[2005/12/22 v1.0 seal styles]
 
 \usepackage{xspace}
-\usepackage{pdfsync}
 \usepackage{graphicx}
 \usepackage{listings}
 
@@ -24,6 +23,10 @@
 \DeclareOption{showcomments}{%
 \commentstrue
 }
+
+\iftexshop
+\usepackage{pdfsync}
+\fi
 
 \ProcessOptions
 \newlength\origabovecaptionskip
