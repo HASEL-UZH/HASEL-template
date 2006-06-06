@@ -108,13 +108,13 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
 % smaller dot for first item in itemize
 \renewcommand\labelitemi{\tiny\raisebox{1.5pt}{$\m@th\bullet$}}
 
-\def\fnum@figure{{\bf\fontfamily{pfr}\selectfont \figurename\nobreakspace\thefigure}}
-\def\fnum@table{{\fontfamily{pfr}\selectfont\bf \tablename\nobreakspace\thetable}}
+%%\def\fnum@figure{{\bf\fontfamily{pfr}\selectfont \figurename\nobreakspace\thefigure}}
+%%\def\fnum@table{{\fontfamily{pfr}\selectfont\bf \tablename\nobreakspace\thetable}}
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip
-  \sbox\@tempboxa{#1: \fontfamily{pfr}\selectfont{#2}}%
+  \sbox\@tempboxa{{\bfseries\fontfamily{pfr}\selectfont{#1}}: \fontfamily{pfr}\selectfont{#2}}%
   \ifdim \wd\@tempboxa >\hsize
-    #1: #2\par
+    {\bfseries\fontfamily{pfr}\selectfont{#1}}: \fontfamily{pfr}\selectfont{#2}\par
   \else
     \global \@minipagefalse
     \hb@xt@\hsize{\box\@tempboxa}%
