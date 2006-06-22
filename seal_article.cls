@@ -36,7 +36,9 @@
 
 \setlength{\textwidth}{15cm}
 \setlength{\textheight}{21.3cm}
-\setlength{\topsep}{2em}
+\setlength{\topsep}{1.5em}
+\setlength{\textfloatsep}{1.5em}
+\setlength{\intextsep}{1.5em}
 
 
 \setlength\oddsidemargin   {11\p@}
