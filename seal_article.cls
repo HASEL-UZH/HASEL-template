@@ -22,7 +22,7 @@
 \ProvidesClass{seal_article}[2005/02/11 v1.0
 ^^J LaTeX document class for seal style articles]
 
-\LoadClass[10pt,a4paper]{article}
+\LoadClass[10pt,a4paper,fleqn]{article}
 \RequirePackage{graphicx}
 \RequirePackage{listings}
 
@@ -36,6 +36,8 @@
 
 \setlength{\textwidth}{15cm}
 \setlength{\textheight}{21.3cm}
+\setlength{\topsep}{2em}
+
 
 \setlength\oddsidemargin   {11\p@}
 \setlength\evensidemargin  {11\p@}

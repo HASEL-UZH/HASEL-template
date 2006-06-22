@@ -24,7 +24,7 @@
               [2005/02/10 v1.0e
  seal LaTeX thesis class]
 
-\LoadClass[10pt,twoside,a4paper]{book}
+\LoadClass[10pt,twoside,a4paper,fleqn]{book}
 \RequirePackage{graphicx}
 \RequirePackage{listings}
 \RequirePackage{fancyhdr}
@@ -45,6 +45,9 @@
 \setlength{\textheight}{21.3cm}
 \setlength{\evensidemargin}{-6mm}
 \addtolength{\oddsidemargin}{4mm}
+\setlength{\topsep}{2em}
+\setlength{\textfloatsep}{2em}
+\setlength{\intextsep}{2em}
 
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ \ #1}{}}
