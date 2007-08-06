@@ -77,7 +77,7 @@
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
                        {-12\p@ \@plus -4\p@ \@minus -4\p@}%
                        {-0.5em \@plus -0.22em \@minus -0.1em}%
-                       {\fontfamily{pfr}\selectfont\itshape}}
+                       {\fontfamily{pfr}\selectfont\bfseries}}
 \renewcommand\subparagraph[1]{\typeout{LLNCS warning: You should not use
                   \string\subparagraph\space with this class}\vskip0.5cm
 You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
@@ -142,7 +142,7 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
   \vskip -10\p@
   \vbox{\hrule height0.25pt width\textwidth}
   \begin{flushright}
-  \vskip -8\p@
+  \vskip -6\p@
   {\fontfamily{pfr}\selectfont\Large\@subtitle}\par\nobreak
   \end{flushright}
   \vskip 40\p@

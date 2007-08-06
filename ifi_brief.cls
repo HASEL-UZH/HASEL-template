@@ -1,6 +1,6 @@
 
 \NeedsTeXFormat{LaTeX2e} 
-\ProvidesClass{da_temp}[2005/11/09 DA Template Class 1.0]
+\ProvidesClass{ifi_brief}[2007/02/20 IfI Brief 1.0]
 
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -14,8 +14,8 @@
 \def\@ifilogo{%
   \parbox[c]{24mm}{\includegraphics[height=20mm]{unisiegel}}%
   \parbox[c]{76mm}{\fontfamily{pfr}\selectfont
-	\LARGE{University of Zurich}\\
-	\normalsize{Department of Informatics}}%
+	\LARGE{Universit\"at Z\"urich}\\
+	\normalsize{Institut f\"ur Informatik}}%
   }
 \def\@ifilogoklein{%
   \parbox[c]{50mm}{\includegraphics[width=5cm]{logo_inf}
@@ -34,8 +34,8 @@
 	\vspace{2mm}
 	Phone +41 44 635 43 35\\
 	Fax +41 44 635 68 09\\
-	gall@ifi.uzh.ch\\
-	http://seal.ifi.uzh.ch\\
+	gall@ifi.unizh.ch\\
+	http://seal.ifi.unizh.ch\\
   }
 }
 
