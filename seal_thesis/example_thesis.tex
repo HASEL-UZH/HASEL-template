@@ -1,0 +1,66 @@
+\documentclass{seal_thesis}
+
+\thesisType{Bachelor/Master/Diploma}
+\date{\today}
+\title{Example title}
+\subtitle{Example subtitle}
+\author{<first name> <last name>}
+\home{<geburtsort>} % Geburtsort
+\country{<heimatland>}
+\legi{xx-xxx-xxx}
+\prof{Prof. Dr. Harald C. Gall}
+\assistent{Assistant}
+\email{<email-address>}
+\url{<url if available>}
+\begindate{<start date of thesis>}
+\enddate{<end date of thesis>}
+
+\begin{document}
+\maketitle
+
+\frontmatter
+
+\begin{acknowledgements}
+\end{acknowledgements}
+
+\begin{abstract}
+\end{abstract}
+
+\begin{zusammenfassung}
+\end{zusammenfassung}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+\mainmatter
+\chapter{Chapter}
+\section{Section}
+%
+\subsubsection{Subsubsection}
+\fig[.5\textwidth]{seal_blue}{seal logo}{logo}
+
+\subsection{Subsection}
+%
+\paragraph{Paragraph.} Always with a point.
+
+\begin{lstlisting}[caption=An example code snippet]
+/**
+ * Javadoc comment
+ */
+public class Foo {
+	// line comment
+	public void bar(int number) {
+		if (number < 0) {
+			return; /* block comment */
+		}
+	}
+}
+\end{lstlisting}
+
+\backmatter
+\bibliographystyle{alpha}
+\bibliography{}
+
+\end{document}

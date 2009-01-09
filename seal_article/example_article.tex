@@ -1,0 +1,35 @@
+\documentclass{seal_article}
+
+\title{S.E.A.L. Article}
+\subtitle{Example}
+
+\begin{document}
+\maketitle
+
+\section{Section}
+%
+\subsubsection{Subsubsection}
+\fig[.5\textwidth]{seal_blue}{seal logo}{logo}
+
+\subsection{Subsection}
+%
+\paragraph{Paragraph.} Always with a point.
+
+\begin{lstlisting}[caption=An example code snippet]
+/**
+ * Javadoc comment
+ */
+public class Foo {
+	// line comment
+	public void bar(int number) {
+		if (number < 0) {
+			return; /* block comment */
+		}
+	}
+}
+\end{lstlisting}
+
+\bibliographystyle{abbrv}
+\bibliography{}
+
+\end{document}

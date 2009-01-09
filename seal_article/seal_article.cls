@@ -1,4 +1,4 @@
-% SEAL ARTICLE DOCUMENT CLASS -- version 1.0 (11-Feb-2005)
+% SEAL ARTICLE DOCUMENT CLASS -- version 2.0 (09-Jan-2009)
 % Beat Fluri LaTeX2e support for Special Articles
 %
 %%
@@ -19,83 +19,55 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_article}[2005/02/11 v1.0
+\ProvidesClass{seal_article}[2009/01/07 v2.0
 ^^J LaTeX document class for seal style articles]
 
 \LoadClass[10pt,a4paper,fleqn]{article}
-\RequirePackage{graphicx}
-\RequirePackage{listings}
+\RequirePackage{seal}
 
-\renewcommand{\rmdefault}{ppl}
-\renewcommand{\sfdefault}{phv}
-\renewcommand{\ttdefault}{pcr}
-
-% Ragged bottom for the actual page (from LNCS)
-\def\thisbottomragged{\def\@textbottom{\vskip\z@ plus.0001fil
-\global\let\@textbottom\relax}}
-
+%% paper dimensions and lengths
 \setlength{\textwidth}{15cm}
 \setlength{\textheight}{21.3cm}
 \setlength{\topsep}{1.5em}
 \setlength{\textfloatsep}{1.5em}
 \setlength{\intextsep}{1.5em}
 
-
 \setlength\oddsidemargin   {11\p@}
 \setlength\evensidemargin  {11\p@}
 \setlength\marginparwidth  {90\p@}
 
-\setlength\headsep   {16\p@}
-
-\setlength\footnotesep{7.7\p@}
-\setlength\textfloatsep{8mm\@plus 2\p@ \@minus 4\p@}
-\setlength\intextsep   {8mm\@plus 2\p@ \@minus 2\p@}
-
 \setcounter{secnumdepth}{2}
 
+%% header/footer
 \def\ps@sealheadings{\let\@mkboth\@gobbletwo
    \def\@oddfoot{\hfil\fontfamily{pfr}\selectfont\small\bfseries\thepage}
    \def\@evenfoot{\hfil\fontfamily{pfr}\selectfont\small\bfseries\thepage}
    \let\@evenhead\@empty\let\@oddhead\@empty}
-
 \ps@sealheadings
 
+%% section redefinitions
 \renewcommand\section{\@startsection{section}{1}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
                        {12\p@ \@plus 4\p@ \@minus 4\p@}%
-                       {\fontfamily{pfr}\selectfont\Large\bfseries\boldmath
-                        \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
+                       {\pfrbold\Large}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
                        {8\p@ \@plus 4\p@ \@minus 4\p@}%
-                       {\fontfamily{pfr}\selectfont\bfseries\boldmath
-                        \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
+                       {\pfrbold}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
                        {6\p@ \@plus 4\p@ \@minus 4\p@}%
-                       {\fontfamily{pfr}\selectfont\fontsize{9}{0}\bfseries\boldmath}}
+                       {\pfrbold\small}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
                        {-12\p@ \@plus -4\p@ \@minus -4\p@}%
                        {-0.5em \@plus -0.22em \@minus -0.1em}%
-                       {\fontfamily{pfr}\selectfont\bfseries}}
-\renewcommand\subparagraph[1]{\typeout{LLNCS warning: You should not use
-                  \string\subparagraph\space with this class}\vskip0.5cm
-You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
+                       {\pfrbold\small}}
 
-% list, itemize, and enumerate margin definitions (from LNCS)
-\setlength\leftmargini  {17\p@}
-\setlength\leftmargin    {\leftmargini}
-\setlength\leftmarginii  {\leftmargini}
-\setlength\leftmarginiii {\leftmargini}
-\setlength\leftmarginiv  {\leftmargini}
-\setlength  \labelsep  {.5em}
-\setlength  \labelwidth{\leftmargini}
-\addtolength\labelwidth{-\labelsep}
-
+% make list for articles a little tighter
 \def\@listI{\leftmargin\leftmargini
             \parsep 0\p@ \@plus1\p@ \@minus\p@
             \topsep 8\p@ \@plus2\p@ \@minus4\p@
-            \itemsep0\p@}
+            \itemsep2\p@}
 \let\@listi\@listI
 \@listi
 \def\@listii {\leftmargin\leftmarginii
@@ -109,22 +81,7 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
               \parsep    \z@
               \partopsep \p@ \@plus\z@ \@minus\p@}
 
-% smaller dot for first item in itemize
-\renewcommand\labelitemi{\tiny\raisebox{1.5pt}{$\m@th\bullet$}}
-
-%%\def\fnum@figure{{\bf\fontfamily{pfr}\selectfont \figurename\nobreakspace\thefigure}}
-%%\def\fnum@table{{\fontfamily{pfr}\selectfont\bf \tablename\nobreakspace\thetable}}
-\long\def\@makecaption#1#2{%
-  \vskip\abovecaptionskip
-  \sbox\@tempboxa{{\bfseries\fontfamily{pfr}\selectfont{#1}}: \fontfamily{pfr}\selectfont{#2}}%
-  \ifdim \wd\@tempboxa >\hsize
-    {\bfseries\fontfamily{pfr}\selectfont{#1}}: \fontfamily{pfr}\selectfont{#2}\par
-  \else
-    \global \@minipagefalse
-    \hb@xt@\hsize{\box\@tempboxa}%
-  \fi
-  \vskip\belowcaptionskip}
-
+%% subtitle
 \def\subtitle#1{\gdef\@subtitle{#1}}
 \def\@subtitle{\@latex@error{No \noexpand\subtitle given}\@ehc}
 \renewcommand\maketitle{%
@@ -137,13 +94,13 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
   \vskip 48\p@
   \vskip 3cm
   \begin{flushright}
-  {\fontfamily{pfr}\selectfont\bfseries\Huge\@title}
+  {\pfrbold\Huge\@title}
   \end{flushright}
   \vskip -10\p@
   \vbox{\hrule height0.25pt width\textwidth}
   \begin{flushright}
   \vskip -6\p@
-  {\fontfamily{pfr}\selectfont\Large\@subtitle}\par\nobreak
+  {\sffamily\Large\@subtitle}\par\nobreak
   \end{flushright}
   \vskip 40\p@
   \endgroup
@@ -157,13 +114,13 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
   \vskip 48\p@
   \vskip 3cm
   \begin{flushright}
- {\fontfamily{pfr}\selectfont\bfseries\Huge\@title}
+ {\pfrbold\Huge\@title}
   \end{flushright}
   \vskip -10\p@
   \vbox{\hrule height0.25pt width\textwidth}
   \begin{flushright}
   \vskip -8\p@
-  {\fontfamily{pfr}\selectfont\Large\@subtitle}\par\nobreak
+  {\sffamily\Large\@subtitle}\par\nobreak
   \end{flushright}
   \vskip 40\p@
   \endgroup

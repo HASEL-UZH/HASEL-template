@@ -21,41 +21,33 @@
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{seal_thesis}
-              [2005/02/10 v1.0e
+              [2009/01/09 v1.0e
  seal LaTeX thesis class]
 
 \LoadClass[10pt,twoside,a4paper,fleqn]{book}
-\RequirePackage{graphicx}
-\RequirePackage{listings}
+\RequirePackage{seal}
 \RequirePackage{fancyhdr}
 
-\newif\ifformal
-\formalfalse
-
-\DeclareOption{formal}{%
-\formaltrue
-}
-\ProcessOptions
-% Using Palatino font
-\renewcommand{\rmdefault}{ppl}
-\renewcommand{\sfdefault}{phv}
-\renewcommand{\ttdefault}{pcr}
-
+%% paper dimensions and lengths
 \setlength{\textwidth}{15cm}
 \setlength{\textheight}{21.3cm}
 \setlength{\evensidemargin}{-6mm}
 \addtolength{\oddsidemargin}{4mm}
+\setlength{\topskip}{0pt}
 \setlength{\topsep}{2em}
-\setlength{\textfloatsep}{2em}
+\setlength{\floatsep}{1.5em plus 2pt minus 2pt}
+\setlength{\textfloatsep}{2.5em plus 2pt minus 4pt}
 \setlength{\intextsep}{2em}
+\setlength{\doublerulesep}{0pt}
 
+%% header/footer
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ \ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection \ \ #1}}
 \fancyhf{}
-\fancyhead[LE,RO]{\fontfamily{pfr}\selectfont\small\bfseries\thepage}
-\fancyhead[LO]{\fontfamily{pfr}\selectfont\rightmark}
-\fancyhead[RE]{\fontfamily{pfr}\selectfont\leftmark}
+\fancyhead[LE,RO]{\pfrbold\small\thepage}
+\fancyhead[LO]{\sffamily\rightmark}
+\fancyhead[RE]{\sffamily\leftmark}
 
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -64,7 +56,7 @@
   \renewcommand{\headrulewidth}{0pt}
 }
 
-
+%% command definitions for title pages
 \def\thesisType#1{\gdef\@thesisType{#1}}
 \def\subtitle#1{\gdef\@subtitle{#1}}
 \def\home#1{\gdef\@home{#1}}
@@ -102,8 +94,8 @@
 \newlength{\normaltopmargin}
 \setlength\normaltopmargin{\topmargin}
 
+%% title page
 \renewcommand\maketitle{%
-  \ifformal
   \ifx\@subtitle\missing
     \subtitlefalse
   \fi
@@ -144,7 +136,6 @@
  \includegraphics[width=7cm]{logo_inf}\hfill\includegraphics[width=3.5cm]{seal_bw}
  \endgroup
  \clearpage\thispagestyle{empty}\cleardoublepage
-  \fi
   \thispagestyle{empty}
   \begingroup
   \fontfamily{pfr}\selectfont
@@ -184,93 +175,8 @@
  \noindent Software Evolution \& Architecture Lab\\[2\p@]
  \noindent Department of Informatics, University of Zurich%
 }
-\def\@maketitle{%
-  \newpage
-  \thispagestyle{empty}
-  \begingroup
-  \fontfamily{pfr}\selectfont
-  \begin{flushright}%
-    \vspace*{50\p@}
-    {\fontsize{24}{0}\selectfont \@thesisType}
-    \vskip -9\p@
-    \vbox{\hrule height0.25pt width\textwidth}
-    \vskip -2\p@
-    {\fontsize{9}{0}\selectfont \@date}
-    \vskip 20\p@
-    {\fontsize{48}{0}\selectfont\bfseries \@title}
-    \ifsubtitle
-      \vskip 5\p@
-      {\fontsize{24}{0}\selectfont \@subtitle}
-    \fi
-    \vfill
-    {\fontsize{24}{0}\selectfont\bfseries \@author}
-    \vskip 2\p@
-    {\fontsize{9}{0}\selectfont of \@home,\ \@country \ (\@legi)}
-    \vskip 35\p@
-    {\fontsize{10}{0}\selectfont\bfseries supervised by}
-    \vskip 4\p@
-    {\fontsize{12}{0}\selectfont \@prof\\[2\p@] \@assistent}
- \end{flushright}%
- \vskip 87\p@
- \parindent \z@
- \includegraphics[width=7cm]{logo_inf}\hfill\includegraphics[width=3.5cm]{seal_bw}
- \endgroup
- \clearpage\thispagestyle{empty}\cleardoublepage
-  \thispagestyle{empty}
-  \begingroup
-  \fontfamily{pfr}\selectfont
-  \begin{flushright}%
-    \vspace*{50\p@}
-    {\fontsize{24}{0}\selectfont \@thesisType}
-    \vskip -9\p@
-    \vbox{\hrule height0.25pt width\textwidth}
-    \vskip 31\p@
-    {\fontsize{48}{0}\selectfont\bfseries \@title}
-    \ifsubtitle
-      \vskip 5\p@
-      {\fontsize{24}{0}\selectfont \@subtitle}
-    \fi
-    \vfill
-    {\fontsize{24}{0}\selectfont\bfseries \@author}
- \end{flushright}%
- \vskip 174\p@
- \parindent \z@
- \includegraphics[width=7cm]{logo_inf}\hfill\includegraphics[width=3.5cm]{seal_bw}
- \endgroup
- \clearpage\thispagestyle{empty}
- \normalfont
- \vspace*{\fill}
- \noindent
- \hspace{-0.9em}
- \begin{tabular}{ll}
-   {\bf \@thesisType} & \\[4\p@]
-   {\bf Author:} & \@author \ifemail , \@email\fi\\[4\p@]
-   \ifurl
-   {\bf URL:} & \@url \\[4\p@]
-   \fi
-   {\bf Project period:} & \@begindate \ - \@enddate \\[4\p@]
- \end{tabular}
 
- \vskip 4\p@
- \noindent Software Evolution \& Architecture Lab\\[2\p@]
- \noindent Department of Informatics, University of Zurich
-}
-
-%\def\ps@sealheadings{\let\@mkboth\@gobbletwo
-%   	\let\@oddfoot\@empty\let\@evenfoot\@empty
-%   	\let\@mkboth\markboth
-%	\def\@evenhead{\vbox{\hbox
-%		{\llap{\parbox[b]{\textwidth}{\fontfamily{pfr}\selectfont\bfseries\thepage}}\hfil
-%		{\rlap{\parbox[b]{50pt}{\fontfamily{pfr}\selectfont\leftmark}}}}
-%         \hrule height0.4pt width\textwidth}}
-%   \def\@oddhead{\vbox{\hbox to \textwidth{%
-%         \fontfamily{pfr}\selectfont{\rightmark}\hfil\bfseries\thepage}\vskip 1.5pt plus 0pt minus 1.5pt%
-%         \hrule height0.4pt width\textwidth}}
-%   \def\chaptermark##1{\markboth{\@chapapp \ \thechapter.\ \ ##1}{}}%
-%   \def\sectionmark##1{\markright{\thesection \ \ ##1}}}
-
-%\ps@fancyheadings
-
+%% chapter definition
 \renewcommand\chapter{\if@openright
                         \clearpage\thispagestyle{empty}\cleardoublepage
                     \else
@@ -336,40 +242,35 @@
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-3.8ex \@plus -1ex \@minus -.2ex}%
                                    {2.3ex \@plus.2ex}%
-                                   {\fontfamily{pfr}\selectfont\LARGE\bfseries}}
+                                   {\pfrbold\LARGE}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                      {-3.3ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\fontfamily{pfr}\selectfont\Large\bfseries}}
+                                     {\pfrbold\Large}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                                      {-3.3ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\fontfamily{pfr}\selectfont\large\bfseries}}
+                                     {\pfrbold\large}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
                                     {3.25ex \@plus1ex \@minus.2ex}%
                                     {-1em}%
-                                    {\normalfont\normalsize\bfseries}}
-\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
-                                       {3.25ex \@plus1ex \@minus .2ex}%
-                                       {-1em}%
-                                      {\normalfont\normalsize\bfseries}}
+                                    {\pfrbold\normalsize}}
 
-\renewcommand\labelitemi{\tiny\raisebox{1.5pt}{$\m@th\bullet$}}
+%% renew table of contens to get rid of upper case header
+\renewcommand\tableofcontents{%
+	\if@twocolumn
+		\@restonecoltrue\onecolumn
+	\else
+		\@restonecolfalse
+	\fi
+	\chapter*{\contentsname
+		\@mkboth{%
+			\contentsname}{\contentsname}}%
+	\@starttoc{toc}%
+	\if@restonecol\twocolumn\fi
+}
 
-%%\def\fnum@figure{{\bfseries\fontfamily{pfr}\selectfont %%\figurename\nobreakspace\thefigure}}
-%%\def\fnum@table{{\bfseries\fontfamily{pfr}\selectfont %%\tablename\nobreakspace\thetable}}
-\long\def\@makecaption#1#2{%
-  \vskip\abovecaptionskip
-  \sbox\@tempboxa{{\bfseries\fontfamily{pfr}\selectfont{#1}}: \fontfamily{pfr}\selectfont{#2}}%
-  \ifdim \wd\@tempboxa >\hsize
-    {\bfseries\fontfamily{pfr}\selectfont{#1}}: \fontfamily{pfr}\selectfont{#2}\par
-  \else
-    \global \@minipagefalse
-    \hb@xt@\hsize{\box\@tempboxa}%
-  \fi
-  \vskip\belowcaptionskip}
-
-% new contenttable for lists and tables
+%% new contenttable for lists and tables
 \renewcommand\listoffigures{%
     \newpage
     \section*{\listfigurename}
@@ -384,7 +285,9 @@
         \@starttoc{lol}%
 }
 
+%% renew bibliography chapter to get rid of upper case header
 \renewcommand\bibname{References}
+%\renewcommand\bibsection{\chapter*{\bibname\@mkboth{\bibname}{\bibname}}}
 
 \newenvironment{abstract}{%
   \chapter*{Abstract}}
