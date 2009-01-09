@@ -1,6 +1,6 @@
 
 \NeedsTeXFormat{LaTeX2e} 
-\ProvidesClass{da_temp}[2005/11/09 DA Template Class 1.0]
+\ProvidesClass{da_temp}[2009/01/09 Task Description Template Class v2.0]
 
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}

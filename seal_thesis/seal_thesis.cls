@@ -21,7 +21,7 @@
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{seal_thesis}
-              [2009/01/09 v1.0e
+              [2009/01/09 v2.0e
  seal LaTeX thesis class]
 
 \LoadClass[10pt,twoside,a4paper,fleqn]{book}
@@ -119,8 +119,11 @@
     \vskip 20\p@
     {\fontfamily{pfr}\fontsize{48}{0}\selectfont\bfseries \@title}
     \ifsubtitle
-      \vskip 5\p@
-      {\fontsize{24}{0}\selectfont \@subtitle}
+      \vskip -12\p@  
+	\parbox{\textwidth}{
+	\begin{flushright}
+		\fontfamily{pfr}\fontsize{24}{30}\selectfont \@subtitle
+	\end{flushright}}
     \fi
     \vfill
     {\fontsize{24}{0}\selectfont\bfseries \@author}
@@ -147,8 +150,11 @@
     \vskip 31\p@
     {\fontsize{48}{0}\selectfont\bfseries \@title}
     \ifsubtitle
-      \vskip 5\p@
-      {\fontsize{24}{0}\selectfont \@subtitle}
+     \vskip -12\p@  
+	\parbox{\textwidth}{
+	\begin{flushright}
+		\fontfamily{pfr}\fontsize{24}{30}\selectfont \@subtitle
+	\end{flushright}}
     \fi
     \vfill
     {\fontsize{24}{0}\selectfont\bfseries \@author}
