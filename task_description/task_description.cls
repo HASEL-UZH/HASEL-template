@@ -1,30 +1,38 @@
 
 \NeedsTeXFormat{LaTeX2e} 
-\ProvidesClass{task_description}[2009/01/09 Task Description Template Class v2.0]
+\ProvidesClass{task_description}[2009/09/20 Task Description Template Class v3.0]
 
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\renewcommand{\sfdefault}{pfr}
+\renewcommand{\sfdefault}{phv}
 
 \def\@ifiplace{Z\"{u}rich}
 \def\@ifiland{Schweiz}
 \def\@uniname{Universit\"{a}t Z\"{u}rich}
 \def\@ifiname{Institut f{\"u}r Informatik}
 
-\def\@ifilogo{%
-  \parbox[c]{24mm}{\includegraphics[height=20mm]{unisiegel}}%
-  \parbox[c]{76mm}{\fontfamily{pfr}\selectfont
-	\LARGE{University of Zurich}\\
-	\normalsize{Department of Informatics}}%
+\def\@uzhlogo{%
+  \parbox[c]{100mm}{\includegraphics[height=20mm]{logo_uzh}}%
   }
-\def\@ifilogoklein{%
-  \parbox[c]{50mm}{\includegraphics[width=5cm]{logo_inf}
+\def\@uzhlogoklein{%
+  \parbox[c]{50mm}{\includegraphics[width=4cm]{logo_uzh}
   }}
+\def\@ifi{%
+  \parbox[t]{100mm}{%
+	~\\[13mm]
+	\fontfamily{phv}\selectfont\bfseries%
+    \large\raggedleft%
+    \vspace*{-2mm}
+    Department of Informatics
+   	\hspace*{46.5mm}
+    \rule{52.5mm}{2pt}
+  }
+}
 \def\@ifiaddr{%
   \parbox[t]{50mm}{%
-    \fontfamily{pfr}\selectfont%
+    \fontfamily{phv}\selectfont%
     \small\raggedleft%
-    ~\\[15mm]
+    ~\\[30mm]
     Binzm\"uhlestrasse 14 \\
     CH-8050 Z\"urich-Oerlikon\\
     Switzerland \\
@@ -57,14 +65,16 @@
   \setlength{\headsep}{4mm}
   \renewcommand{\@oddhead}{%
     \hspace*{-24mm}%
-    \@ifilogo%
-    \hspace*{-131mm}%
+    \@uzhlogo%
+    \hspace*{-148mm}%
+    \@ifi%
+    \hspace*{-81mm}%
     \@ifiaddr%
     \hfill% avoids underfull hbox
   }
   \renewcommand{\@oddfoot}{\@empty}
 }
-\newcommand{\@smallhead}{\hspace*{-41mm}\protect\@ifilogoklein\hfill\small\fontfamily{pfr}\selectfont\bfseries\thepage}
+\newcommand{\@smallhead}{\hspace*{-41mm}\protect\@uzhlogoklein\hfill\small\fontfamily{phv}\selectfont\bfseries\thepage}
 \if@twoside
   \renewcommand{\ps@headings}{
     \renewcommand{\@oddhead}{\@smallhead}
