@@ -2,7 +2,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
-\ProvidesPackage{seal}[2009/01/09 v2.0 seal styles]
+\ProvidesPackage{seal}[2011/09/16 v2.0 seal styles]
 
 \usepackage[english]{babel}
 \usepackage{cite}
@@ -22,16 +22,16 @@
 
 %% fonts
 \renewcommand{\rmdefault}{ppl}
-\renewcommand{\sfdefault}{pfr}
+\renewcommand{\sfdefault}{phv}
 \renewcommand{\ttdefault}{pcr}
-\newcommand{\pfrbold}{\sffamily\bfseries}
+\newcommand{\phvbold}{\sffamily\bfseries}
 
 %% captions for figures, listings, and tables
 \long\def\@makecaption#1#2{%
 	\vskip\abovecaptionskip
-	\sbox\@tempboxa{{\pfrbold{\small #1}}: \sffamily{\small #2}}%
+	\sbox\@tempboxa{{\phvbold{\small #1}}: \sffamily{\small #2}}%
 	\ifdim \wd\@tempboxa >\hsize
-		{\pfrbold{\small #1}}: {\sffamily{\small #2}}\par
+		{\phvbold{\small #1}}: {\sffamily{\small #2}}\par
 	\else
 		\global \@minipagefalse
 		\hb@xt@\hsize{\box\@tempboxa\hfil}%
