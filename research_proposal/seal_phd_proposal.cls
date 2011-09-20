@@ -1,5 +1,5 @@
-% SEAL ARTICLE DOCUMENT CLASS -- version 1.0 (11-Feb-2005)
-% Beat Fluri LaTeX2e support for Special Articles
+% SEAL PROPOSAL DOCUMENT CLASS -- version 2.0 (20-Sep-2011)
+% Beat Fluri, Matthias Hert LaTeX2e support for Special Articles
 %
 %%
 %% \CharacterTable
@@ -19,7 +19,7 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_phd_proposal}[2008/10/27 v1.0
+\ProvidesClass{seal_phd_proposal}[2011/09/20 v2.0
 LaTeX document class for seal style phd proposals]
 
 \LoadClass[10pt,a4paper,fleqn]{article}
@@ -53,20 +53,20 @@ LaTeX document class for seal style phd proposals]
 %% font definitions for latex
 %default fonts
 \renewcommand{\rmdefault}{ppl}
-\renewcommand{\sfdefault}{pfr}
+\renewcommand{\sfdefault}{phv}
 \renewcommand{\ttdefault}{pcr}
-\newcommand{\pfrbold}{\sffamily\bfseries}
+\newcommand{\phvbold}{\sffamily\bfseries}
 
 % title page
-\newcommand\pfrtitle{\fontfamily{pfr}\fontsize{32}{42}\selectfont\bfseries}
-\newcommand\pfrtext{\fontfamily{pfr}\fontsize{13}{0}\selectfont}
-\newcommand\pfrname{\fontfamily{pfr}\fontsize{15}{16}\selectfont\bfseries}
+\newcommand\phvtitle{\fontfamily{phv}\fontsize{32}{42}\selectfont\bfseries}
+\newcommand\phvtext{\fontfamily{phv}\fontsize{13}{0}\selectfont}
+\newcommand\phvname{\fontfamily{phv}\fontsize{15}{16}\selectfont\bfseries}
 %% end font definitions
 
 %% heading
 \def\ps@sealheadings{\let\@mkboth\@gobbletwo
-   \def\@oddfoot{\hfil\fontfamily{pfr}\selectfont\small\bfseries\thepage}
-   \def\@evenfoot{\hfil\fontfamily{pfr}\selectfont\small\bfseries\thepage}
+   \def\@oddfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
+   \def\@evenfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
    \let\@evenhead\@empty\let\@oddhead\@empty}
 
 \ps@sealheadings
@@ -84,35 +84,35 @@ LaTeX document class for seal style phd proposals]
 \setlength{\baselineskip}{15pt}
 \setlength{\parindent}{0pt}
 
-{\pfrtitle \@title}\\[7pt]
+{\phvtitle \@title}\\[7pt]
 {\sffamily\LARGE \@subtitle}
 
 \vspace{2cm}
-{\pfrbold\large Research Proposal}
+{\phvbold\large Research Proposal}
 
 \vfill
-{\pfrtext
+{\phvtext
 by\\[2pt]
-{\pfrname \@author}
+{\phvname \@author}
 }
 
 \vspace{.8\baselineskip}
-{\pfrtext
+{\phvtext
 from\\
 \@home, \@country
 }
 
 \vfill
-{\pfrbold Advisor} \\
-{\pfrtext
+{\phvbold Advisor} \\
+{\phvtext
 Prof. Dr. Harald C. Gall
 }
 
 \vfill
-{\pfrtext \@date}
+{\phvtext \@date}
 
 \vfill
-\includegraphics[scale=.7]{logo_inf}
+\includegraphics[scale=.85]{logo_uzh}
 \hspace{\fill}
 \includegraphics[scale=.66]{seal_bw}
 \clearpage
@@ -143,25 +143,25 @@ Prof. Dr. Harald C. Gall
 	\@startsection{section}{1}{\z@}%
 	{-3.8ex \@plus -1ex \@minus -.2ex}%
 	{2.3ex \@plus.2ex}%
-	{\pfrbold\LARGE}%
+	{\phvbold\LARGE}%
 }
 \renewcommand\subsection{%
 	\@startsection{subsection}{2}{\z@}%
 	{-3.3ex\@plus -1ex \@minus -.2ex}%
 	{1.5ex \@plus .2ex}%
-	{\pfrbold\Large}%
+	{\phvbold\Large}%
 }
 \renewcommand\subsubsection{%
 	\@startsection{subsubsection}{3}{\z@}%
 	{-3.3ex\@plus -1ex \@minus -.2ex}%
 	{1.5ex \@plus .2ex}%
-	{\pfrbold\large}%
+	{\phvbold\large}%
 }
 \renewcommand\paragraph{%
 	\@startsection{paragraph}{4}{\z@}%
 	{3.25ex \@plus1ex \@minus.2ex}%
 	{-1em}%
-	{\pfrbold\normalsize}%
+	{\phvbold\normalsize}%
 }
 %% end section definitions
 
@@ -170,9 +170,9 @@ Prof. Dr. Harald C. Gall
 %% captions for figures, listings, and tables
 \long\def\@makecaption#1#2{%
 	\vskip\abovecaptionskip
-	\sbox\@tempboxa{{\pfrbold{\small #1}}: \sffamily{\small #2}}%
+	\sbox\@tempboxa{{\phvbold{\small #1}}: \sffamily{\small #2}}%
 	\ifdim \wd\@tempboxa >\hsize
-		{\pfrbold{\small #1}}: {\sffamily{\small #2}}\par
+		{\phvbold{\small #1}}: {\sffamily{\small #2}}\par
 	\else
 		\global \@minipagefalse
 		\hb@xt@\hsize{\box\@tempboxa\hfil}%
