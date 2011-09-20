@@ -1,5 +1,5 @@
-% SEAL ARTICLE DOCUMENT CLASS -- version 2.0 (09-Jan-2009)
-% Beat Fluri LaTeX2e support for Special Articles
+% SEAL ARTICLE DOCUMENT CLASS -- version 3.0 (16-Sep-2011)
+% Beat Fluri, Matthias Hert LaTeX2e support for Special Articles
 %
 %%
 %% \CharacterTable
@@ -19,7 +19,7 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_article}[2009/01/07 v2.0
+\ProvidesClass{seal_article}[2011/09/16 v3.0
 ^^J LaTeX document class for seal style articles]
 
 \LoadClass[10pt,a4paper,fleqn]{article}
@@ -40,8 +40,8 @@
 
 %% header/footer
 \def\ps@sealheadings{\let\@mkboth\@gobbletwo
-   \def\@oddfoot{\hfil\fontfamily{pfr}\selectfont\small\bfseries\thepage}
-   \def\@evenfoot{\hfil\fontfamily{pfr}\selectfont\small\bfseries\thepage}
+   \def\@oddfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
+   \def\@evenfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
    \let\@evenhead\@empty\let\@oddhead\@empty}
 \ps@sealheadings
 
@@ -49,19 +49,19 @@
 \renewcommand\section{\@startsection{section}{1}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
                        {12\p@ \@plus 4\p@ \@minus 4\p@}%
-                       {\pfrbold\Large}}
+                       {\phvbold\Large}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
                        {8\p@ \@plus 4\p@ \@minus 4\p@}%
-                       {\pfrbold\large}}
+                       {\phvbold\large}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
                        {6\p@ \@plus 4\p@ \@minus 4\p@}%
-                       {\pfrbold}}
+                       {\phvbold}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
                        {-12\p@ \@plus -4\p@ \@minus -4\p@}%
                        {-0.5em \@plus -0.22em \@minus -0.1em}%
-                       {\pfrbold\small}}
+                       {\phvbold\small}}
 
 % make list for articles a little tighter
 \def\@listI{\leftmargin\leftmargini
@@ -90,11 +90,11 @@
   \begingroup
   
   \parindent \z@
-  \includegraphics[width=7cm]{logo_inf}\hfill\includegraphics[width=3.5cm]{seal_bw}
+  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
   \vskip 48\p@
   \vskip 3cm
   \begin{flushright}
-  {\pfrbold\Huge\@title}
+  {\phvbold\huge\@title}
   \end{flushright}
   \vskip -10\p@
   \vbox{\hrule height0.25pt width\textwidth}
@@ -110,11 +110,11 @@
  \let\newline\\
   \begingroup
   \parindent \z@
-  \includegraphics[width=7cm]{logo_inf}\hfill\includegraphics[width=3.5cm]{seal_bw}
+  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
   \vskip 48\p@
   \vskip 3cm
   \begin{flushright}
- {\pfrbold\Huge\@title}
+ {\phvbold\Huge\@title}
   \end{flushright}
   \vskip -10\p@
   \vbox{\hrule height0.25pt width\textwidth}
