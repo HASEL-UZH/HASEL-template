@@ -1,6 +1,6 @@
 
 \NeedsTeXFormat{LaTeX2e} 
-\ProvidesClass{task_description}[2009/09/20 Task Description Template Class v3.0]
+\ProvidesClass{task_description}[2011/09/20 Task Description Template Class v3.0]
 
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}

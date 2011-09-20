@@ -1,5 +1,5 @@
-% SEAL ARTICLE DOCUMENT CLASS -- version 1.0 (11-Feb-2005)
-% Beat Fluri LaTeX2e support for Special Articles
+	% SEAL REPORT DOCUMENT CLASS -- version 2.0 (20-Sep-2011)
+% Beat Fluri, Matthias Hert LaTeX2e support for Special Articles
 %
 %%
 %% \CharacterTable
@@ -19,7 +19,7 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_article}[2005/02/11 v1.0
+\ProvidesClass{seal_report}[2011/09/20 v2.0
 ^^J LaTeX document class for seal style articles]
 
 \LoadClass[10pt,a4paper]{article}
@@ -50,8 +50,8 @@
 \setcounter{secnumdepth}{2}
 
 \def\ps@sealheadings{\let\@mkboth\@gobbletwo
-   \def\@oddfoot{\hfil\fontfamily{pfr}\selectfont\small\bfseries\thepage}
-   \def\@evenfoot{\hfil\fontfamily{pfr}\selectfont\small\bfseries\thepage}
+   \def\@oddfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
+   \def\@evenfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
    \let\@evenhead\@empty\let\@oddhead\@empty}
 
 \ps@sealheadings
@@ -59,21 +59,21 @@
 \renewcommand\section{\@startsection{section}{1}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
                        {12\p@ \@plus 4\p@ \@minus 4\p@}%
-                       {\fontfamily{pfr}\selectfont\Large\bfseries\boldmath
+                       {\fontfamily{phv}\selectfont\Large\bfseries\boldmath
                         \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
                        {8\p@ \@plus 4\p@ \@minus 4\p@}%
-                       {\fontfamily{pfr}\selectfont\bfseries\boldmath
+                       {\fontfamily{phv}\selectfont\bfseries\boldmath
                         \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
                        {6\p@ \@plus 4\p@ \@minus 4\p@}%
-                       {\fontfamily{pfr}\selectfont\fontsize{9}{0}\bfseries\boldmath}}
+                       {\fontfamily{phv}\selectfont\fontsize{9}{0}\bfseries\boldmath}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
                        {-12\p@ \@plus -4\p@ \@minus -4\p@}%
                        {-0.5em \@plus -0.22em \@minus -0.1em}%
-                       {\fontfamily{pfr}\selectfont\itshape}}
+                       {\fontfamily{phv}\selectfont\itshape}}
 \renewcommand\subparagraph[1]{\typeout{LLNCS warning: You should not use
                   \string\subparagraph\space with this class}\vskip0.5cm
 You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
@@ -108,13 +108,13 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
 % smaller dot for first item in itemize
 \renewcommand\labelitemi{\tiny\raisebox{1.5pt}{$\m@th\bullet$}}
 
-%%\def\fnum@figure{{\bf\fontfamily{pfr}\selectfont \figurename\nobreakspace\thefigure}}
-%%\def\fnum@table{{\fontfamily{pfr}\selectfont\bf \tablename\nobreakspace\thetable}}
+%%\def\fnum@figure{{\bf\fontfamily{phv}\selectfont \figurename\nobreakspace\thefigure}}
+%%\def\fnum@table{{\fontfamily{phv}\selectfont\bf \tablename\nobreakspace\thetable}}
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip
-  \sbox\@tempboxa{{\bfseries\fontfamily{pfr}\selectfont{#1}}: \fontfamily{pfr}\selectfont{#2}}%
+  \sbox\@tempboxa{{\bfseries\fontfamily{phv}\selectfont{#1}}: \fontfamily{phv}\selectfont{#2}}%
   \ifdim \wd\@tempboxa >\hsize
-    {\bfseries\fontfamily{pfr}\selectfont{#1}}: \fontfamily{pfr}\selectfont{#2}\par
+    {\bfseries\fontfamily{phv}\selectfont{#1}}: \fontfamily{phv}\selectfont{#2}\par
   \else
     \global \@minipagefalse
     \hb@xt@\hsize{\box\@tempboxa}%
@@ -128,14 +128,14 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
   \vspace*{-3cm}
   \begingroup
   \parindent \z@
-  \includegraphics[width=7cm]{logo_inf}\hfill\includegraphics[width=3.5cm]{seal_bw}
+  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
   \vskip 48\p@
   \vskip 3cm
-  \hfill{\fontfamily{pfr}\selectfont\bfseries\Huge\@title}
+  \hfill{\fontfamily{phv}\selectfont\bfseries\Huge\@title}
   \\[-5\p@]
   \vbox{\hrule height0.25pt width\textwidth}
   \vskip 2\p@
-  \hfill{\fontfamily{pfr}\selectfont\Large\@subtitle}\par\nobreak
+  \hfill{\fontfamily{phv}\selectfont\Large\@subtitle}\par\nobreak
   \vskip 40\p@
   \endgroup
 }
@@ -144,13 +144,13 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
  \let\newline\\
   \begingroup
   \parindent \z@
-  \includegraphics[width=6cm]{logo_inf}\hfill\includegraphics[width=3cm]{seal_bw}
+  \includegraphics[width=4cm]{logo_uzh}\hfill\includegraphics[width=3cm]{seal_bw}
   \vskip 45\p@
-  \hfill{\fontfamily{pfr}\selectfont\bfseries\Huge\@title}
+  \hfill{\fontfamily{phv}\selectfont\bfseries\Huge\@title}
   \\[-5\p@]
   \vbox{\hrule height0.25pt width\textwidth}
   \vskip 2\p@
-  \hfill{\fontfamily{pfr}\selectfont\Large\@subtitle}\par\nobreak
+  \hfill{\fontfamily{phv}\selectfont\Large\@subtitle}\par\nobreak
   \vskip 40\p@
   \endgroup
 }
