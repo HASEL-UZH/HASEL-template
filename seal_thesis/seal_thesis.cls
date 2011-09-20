@@ -21,7 +21,7 @@
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{seal_thesis}
-              [2009/01/09 v2.0e
+              [2011/09/16 v3.0e
  seal LaTeX thesis class]
 
 \LoadClass[10pt,twoside,a4paper,fleqn]{book}
@@ -45,7 +45,7 @@
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ \ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection \ \ #1}}
 \fancyhf{}
-\fancyhead[LE,RO]{\pfrbold\small\thepage}
+\fancyhead[LE,RO]{\phvbold\small\thepage}
 \fancyhead[LO]{\sffamily\rightmark}
 \fancyhead[RE]{\sffamily\leftmark}
 
@@ -108,60 +108,60 @@
   \newpage
   \thispagestyle{empty}
   \begingroup
-  \fontfamily{pfr}\selectfont
+  \fontfamily{phv}\selectfont
   \begin{flushright}%
     \vspace*{50\p@}
-    {\fontsize{24}{0}\selectfont \@thesisType}
+    {\fontsize{20}{0}\selectfont \@thesisType}
     \vskip -9\p@
     \vbox{\hrule height0.25pt width\textwidth}
     \vskip -2\p@
     {\fontsize{9}{0}\selectfont \@date}
     \vskip 20\p@
-    {\fontfamily{pfr}\fontsize{48}{0}\selectfont\bfseries \@title}
+    {\fontfamily{phv}\fontsize{40}{0}\selectfont\bfseries \@title}
     \ifsubtitle
       \vskip -12\p@  
 	\parbox{\textwidth}{
 	\begin{flushright}
-		\fontfamily{pfr}\fontsize{24}{30}\selectfont \@subtitle
+		\fontfamily{phv}\fontsize{20}{30}\selectfont \@subtitle
 	\end{flushright}}
     \fi
     \vfill
-    {\fontsize{24}{0}\selectfont\bfseries \@author}
+    {\fontsize{20}{0}\selectfont\bfseries \@author}
     \vskip 2\p@
-    {\fontsize{9}{0}\selectfont of \@home,\ \@country \ (\@legi)}
+    {\fontsize{8}{0}\selectfont of \@home,\ \@country \ (\@legi)}
     \vskip 35\p@
     {\fontsize{10}{0}\selectfont\bfseries supervised by}
     \vskip 4\p@
-    {\fontsize{12}{0}\selectfont \@prof\\[2\p@] \@assistent}
+    {\fontsize{11}{0}\selectfont \@prof\\[2\p@] \@assistent}
  \end{flushright}%
  \vskip 87\p@
  \parindent \z@
- \includegraphics[width=7cm]{logo_inf}\hfill\includegraphics[width=3.5cm]{seal_bw}
+ \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
  \endgroup
  \clearpage\thispagestyle{empty}\cleardoublepage
   \thispagestyle{empty}
   \begingroup
-  \fontfamily{pfr}\selectfont
+  \fontfamily{phv}\selectfont
   \begin{flushright}%
     \vspace*{50\p@}
-    {\fontsize{24}{0}\selectfont \@thesisType}
+    {\fontsize{20}{0}\selectfont \@thesisType}
     \vskip -9\p@
     \vbox{\hrule height0.25pt width\textwidth}
     \vskip 31\p@
-    {\fontsize{48}{0}\selectfont\bfseries \@title}
+    {\fontsize{40}{0}\selectfont\bfseries \@title}
     \ifsubtitle
      \vskip -12\p@  
 	\parbox{\textwidth}{
 	\begin{flushright}
-		\fontfamily{pfr}\fontsize{24}{30}\selectfont \@subtitle
+		\fontfamily{phv}\fontsize{20}{30}\selectfont \@subtitle
 	\end{flushright}}
     \fi
     \vfill
-    {\fontsize{24}{0}\selectfont\bfseries \@author}
+    {\fontsize{20}{0}\selectfont\bfseries \@author}
  \end{flushright}%
  \vskip 174\p@
  \parindent \z@
- \includegraphics[width=7cm]{logo_inf}\hfill\includegraphics[width=3.5cm]{seal_bw}
+ \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
  \endgroup
  \clearpage\thispagestyle{empty}
  \normalfont
@@ -219,7 +219,7 @@
   {\parindent \z@ \raggedright
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
-        \hfill{\fontfamily{pfr}\fontsize{22}{0}\selectfont\bfseries \@chapapp\space \thechapter}%
+        \hfill{\fontfamily{phv}\fontsize{18}{0}\selectfont\bfseries \@chapapp\space \thechapter}%
         \par\nobreak
         \vbox{\hrule height0.25pt width\textwidth}
         \par\nobreak
@@ -227,7 +227,7 @@
       \fi
     \fi
     \interlinepenalty\@M
-    \flushright{\fontfamily{pfr}\fontsize{32}{0}\selectfont\bfseries #1}\par\nobreak
+    \flushright{\fontfamily{phv}\fontsize{28}{0}\selectfont\bfseries #1}\par\nobreak
     \vskip 40\p@
   }}
 \def\@schapter#1{\if@twocolumn
@@ -241,26 +241,26 @@
   {\parindent \z@ \raggedright
     \interlinepenalty\@M
     \vbox{\hrule height0.4pt width\textwidth}
-    \flushright{\fontfamily{pfr}\fontsize{32}{0}\selectfont\bfseries #1}\par\nobreak
+    \flushright{\fontfamily{phv}\fontsize{32}{0}\selectfont\bfseries #1}\par\nobreak
     \vskip 40\p@
   }}
 
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-3.8ex \@plus -1ex \@minus -.2ex}%
                                    {2.3ex \@plus.2ex}%
-                                   {\pfrbold\LARGE}}
+                                   {\phvbold\LARGE}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                      {-3.3ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\pfrbold\Large}}
+                                     {\phvbold\Large}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                                      {-3.3ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\pfrbold\large}}
+                                     {\phvbold\large}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
                                     {3.25ex \@plus1ex \@minus.2ex}%
                                     {-1em}%
-                                    {\pfrbold\normalsize}}
+                                    {\phvbold\normalsize}}
 
 %% renew table of contens to get rid of upper case header
 \renewcommand\tableofcontents{%
