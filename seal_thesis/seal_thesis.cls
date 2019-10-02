@@ -117,7 +117,7 @@
     \vskip -2\p@
     {\fontsize{9}{0}\selectfont \@date}
     \vskip 20\p@
-    {\fontfamily{phv}\fontsize{40}{0}\selectfont\bfseries \@title}
+    {\fontfamily{phv}\fontsize{40}{44}\selectfont\bfseries \@title\par}
     \ifsubtitle
       \vskip -12\p@  
 	\parbox{\textwidth}{
@@ -148,7 +148,7 @@
     \vskip -9\p@
     \vbox{\hrule height0.25pt width\textwidth}
     \vskip 31\p@
-    {\fontsize{40}{0}\selectfont\bfseries \@title}
+    {\fontsize{40}{44}\selectfont\bfseries \@title\par}
     \ifsubtitle
      \vskip -12\p@  
 	\parbox{\textwidth}{
@@ -227,7 +227,7 @@
       \fi
     \fi
     \interlinepenalty\@M
-    \flushright{\fontfamily{phv}\fontsize{28}{0}\selectfont\bfseries #1}\par\nobreak
+    \flushright{\fontfamily{phv}\fontsize{28}{30}\selectfont\bfseries #1\par}\par\nobreak
     \vskip 40\p@
   }}
 \def\@schapter#1{\if@twocolumn
@@ -241,7 +241,7 @@
   {\parindent \z@ \raggedright
     \interlinepenalty\@M
     \vbox{\hrule height0.4pt width\textwidth}
-    \flushright{\fontfamily{phv}\fontsize{32}{0}\selectfont\bfseries #1}\par\nobreak
+    \flushright{\fontfamily{phv}\fontsize{32}{34}\selectfont\bfseries #1\par}\par\nobreak
     \vskip 40\p@
   }}
 
