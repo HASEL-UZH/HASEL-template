@@ -1,0 +1,129 @@
+\documentclass{seal_thesis}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathtools}
+\usepackage{latexsym}
+\usepackage{ifthen}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+% for adjustwidth environment
+\usepackage[strict]{changepage}
+\usepackage{balance}
+\usepackage{framed}
+\usepackage{subcaption}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[hyphens]{url}
+\usepackage{xspace}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{enumitem}
+\newfloat{listing}{thp}{lop}
+\floatname{listing}{Listing}
+
+%All necessary packages
+\usepackage{microtype}
+\usepackage{multirow, tabularx}
+\usepackage{color, colortbl}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{placeins}
+\usepackage{atbegshi,picture}
+
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{pifont}
+\usepackage[ruled,norelsize]{algorithm2e}
+\usepackage{setspace}
+\usepackage{amsthm}
+\usepackage{microtype}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{lmodern}
+\usepackage{rotating}
+
+\usepackage{hhline}
+\usepackage[nohyperlinks]{acronym}
+\usepackage[olditem, oldenum]{paralist}
+\usepackage{textcomp}
+\usepackage{placeins}
+\usepackage[at]{easylist}
+\usepackage{scrextend}
+
+\usepackage{graphics}
+\usepackage{placeins}
+\usepackage{appendix}
+
+\usepackage{pdflscape}
+
+%\usepackage{natbib}
+\usepackage[square]{natbib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MY OWN DEFINITIONS & VARIABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\widowpenalty10000
+\clubpenalty10000
+
+%----------------------------------------------------
+
+%Start with the actual document
+\title{This is the End my Friend}
+
+\author{Your Name}
+
+\begin{document}
+
+% The title page has to follow the official IFI template, which is typically a Word file. 
+% Check the IFI website for the current version. 
+% Edit the template, save it as PDF, and include it here:
+
+\includepdf[pages=-]{title_page}
+\onehalfspace
+
+\frontmatter
+\include{acknowledgements}
+\include{abstract}
+
+\begin{otherlanguage}{ngerman}
+\include{zusammenfassung}
+\end{otherlanguage}
+
+\tableofcontents
+
+\listoffigures
+
+\vspace{0.1em}
+
+\listoftables
+
+\vspace{0.1em}
+
+\newpage
+\thispagestyle{empty}
+
+\mainmatter
+
+% In case a list of acronyms is needed:
+%\include{acronyms}
+
+% the synopsis:
+\include{synopsis/synopsis}
+
+% the single papers:
+\include{papers/ICSE19/paper}
+%\include{papers/paper2/paper}
+%\include{papers/paper3/paper}
+%\include{papers/paper4/paper}
+
+\backmatter
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\include{appendix_cv}
+
+\end{document}

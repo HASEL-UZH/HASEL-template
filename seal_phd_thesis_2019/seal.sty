@@ -1,0 +1,104 @@
+%% seal main style file
+%
+
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{seal}[2009/01/09 v2.0 seal styles]
+
+\usepackage[ngerman,english]{babel}
+\usepackage{cite}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{xspace}
+\usepackage{setspace}
+
+%% colors (Eclipse-like colors for listings)
+\definecolor{stringcolor}{RGB}{5,60,220}
+\definecolor{keywordcolor}{RGB}{127,0,85}
+\definecolor{javadoccolor}{RGB}{63,95,191}
+\definecolor{commentcolor}{RGB}{0,127,0}
+\definecolor{doccolor}{RGB}{63,95,191}
+
+%% fonts
+\renewcommand{\rmdefault}{ppl}
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\ttdefault}{pcr}
+\newcommand{\phvbold}{\sffamily\bfseries}
+
+%% captions for figures, listings, and tables
+\long\def\@makecaption#1#2{%
+	\vskip\abovecaptionskip
+	\sbox\@tempboxa{{\phvbold{\small #1}}: \sffamily{\small #2}}%
+	\ifdim \wd\@tempboxa >\hsize
+		{\phvbold{\small #1}}: {\sffamily{\small #2}}\par
+	\else
+		\global \@minipagefalse
+		\hb@xt@\hsize{\box\@tempboxa\hfil}%
+	\fi
+	\vskip\belowcaptionskip%
+}
+
+%% General figure command
+% use: \fig[width]{file}{caption}{label}
+\newcommand\fig[4][0cm]{%
+  \begin{figure}[htb]
+    \ifdim #1=0cm
+      \includegraphics{#2}
+    \else
+      \includegraphics[width=#1]{#2}
+    \fi
+    \caption{\label{#4}#3}
+  \end{figure}%
+}
+
+%% smaller bullet for itemized lists
+\renewcommand\labelitemi{\tiny\raisebox{1.5pt}{$\m@th\bullet$}}
+
+%% configuration and helpers for listings
+%\lstset{language=Java}
+%\lstset{columns=fullflexible}
+\lstset{basicstyle=\ttfamily\footnotesize}
+\lstset{numbers=left}
+\lstset{numberstyle=\scriptsize}
+\lstset{keywordstyle=\color{keywordcolor}\bfseries}
+\lstset{commentstyle=\color{commentcolor}}
+\lstset{morecomment=[s][\color{doccolor}]{/**}{*/}}
+\lstset{stringstyle=\color{stringcolor}}
+\lstset{tabsize=4}
+\lstset{showstringspaces=false}
+\lstset{lineskip=1.5pt}
+\lstset{captionpos=b}
+\lstset{moredelim=[is][\bfseries]{|}{|}}
+\newcommand\lst{\lstinline}
+
+%% useful commands
+\newcommand{\note}[2]{%
+	\fbox{\bfseries\sffamily\scriptsize#1}
+	{\sf\small$\triangleright$\textit{#2}$\triangleleft$}
+}
+\newcommand{\todo}[1]{\note{TODO}{#1}}
+\newcommand{\ncite}[1]{\note{CITE}{#1}}
+
+%% some abbrevations
+\newcommand{\lstref}[1]{Listing~\ref{#1}\xspace}
+\newcommand{\algref}[1]{Algorithm~\ref{#1}\xspace}
+\newcommand{\chpref}[1]{Chapter~\ref{#1}\xspace}
+\newcommand{\appref}[1]{Appendix~\ref{#1}\xspace}
+\newcommand{\secref}[1]{Section~\ref{#1}\xspace}
+\newcommand{\figref}[1]{Figure~\ref{#1}\xspace}
+\newcommand{\tabref}[1]{Table~\ref{#1}\xspace}
+\newcommand{\ie}{\emph{i.e.},\xspace}
+\newcommand{\wrt}{\emph{w.r.t.}\xspace}
+\newcommand{\eg}{\emph{e.g.},\xspace}
+\newcommand{\etal}{\emph{et al.}\xspace}
+\newcommand{\cf}{\emph{cf.}\xspace}
+\newcommand{\ontoaccess}{\textsc{Onto\-Access}\xspace}
+\newcommand{\evolizer}{\textsc{Evo\-lizer}\xspace}
+\newcommand{\sofas}{\textsc{Sofas}\xspace}
+
+\newcommand{\code}[1]{\texttt{\small #1}}
+\newcommand{\codecap}[1]{\texttt{\footnotesize #1}}
+
+\endinput
