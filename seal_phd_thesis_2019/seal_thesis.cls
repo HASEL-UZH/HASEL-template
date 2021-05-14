@@ -179,7 +179,7 @@
  \end{tabular}
 
  \vskip 4\p@
- \noindent Software Evolution \& Architecture Lab\\[2\p@]
+ \noindent Human Aspects of Software Engineering Lab\\[2\p@]
  \noindent Department of Informatics, University of Zurich%
 }
 
