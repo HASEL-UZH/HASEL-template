@@ -136,7 +136,7 @@
  \end{flushright}%
  \vskip 87\p@
  \parindent \z@
- \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
+ \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
  \endgroup
  \clearpage\thispagestyle{empty}\cleardoublepage
   \thispagestyle{empty}
@@ -161,7 +161,7 @@
  \end{flushright}%
  \vskip 174\p@
  \parindent \z@
- \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
+ \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
  \endgroup
  \clearpage\thispagestyle{empty}
  \normalfont
@@ -178,7 +178,7 @@
  \end{tabular}
 
  \vskip 4\p@
- \noindent Software Evolution \& Architecture Lab\\[2\p@]
+ \noindent Human Aspects of Software Engineering Lab\\[2\p@]
  \noindent Department of Informatics, University of Zurich%
 }
 

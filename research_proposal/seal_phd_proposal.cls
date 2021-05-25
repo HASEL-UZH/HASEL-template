@@ -105,7 +105,7 @@ from\\
 \vfill
 {\phvbold Advisor} \\
 {\phvtext
-Prof. Dr. Harald C. Gall
+Prof. Dr. Thomas Fritz
 }
 
 \vfill

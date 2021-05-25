@@ -37,13 +37,13 @@
     CH-8050 Z\"urich-Oerlikon\\
     Switzerland \\
     \vspace{5mm}
-    \textbf{Prof. Dr. Harald C. Gall}\\
-	Software Evolution and\\ Architecture Lab\\
+    \textbf{Prof. Dr. Thomas Fritz}\\
+	Human Aspects of\\ Software Engineering Lab\\
 	\vspace{2mm}
-	Phone +41 44 635 43 35\\
-	Fax +41 44 635 68 09\\
-	gall@ifi.uzh.ch\\
-	http://seal.ifi.uzh.ch\\
+	Phone +41 44 635 67 32\\
+	Fax +41 44 635 71 48\\
+	fritz@ifi.uzh.ch\\
+	https://ifi.uzh.ch\\
   }
 }
 

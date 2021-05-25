@@ -128,7 +128,7 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
   \vspace*{-3cm}
   \begingroup
   \parindent \z@
-  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
+  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
   \vskip 48\p@
   \vskip 3cm
   \hfill{\fontfamily{phv}\selectfont\bfseries\Huge\@title}
@@ -144,7 +144,7 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
  \let\newline\\
   \begingroup
   \parindent \z@
-  \includegraphics[width=4cm]{logo_uzh}\hfill\includegraphics[width=3cm]{seal_bw}
+  \includegraphics[width=4cm]{logo_uzh}\hfill\includegraphics[width=4.5cm]{seal_bw}
   \vskip 45\p@
   \hfill{\fontfamily{phv}\selectfont\bfseries\Huge\@title}
   \\[-5\p@]

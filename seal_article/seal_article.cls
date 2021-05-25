@@ -90,7 +90,7 @@
   \begingroup
   
   \parindent \z@
-  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
+  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
   \vskip 48\p@
   \vskip 3cm
   \begin{flushright}
@@ -110,7 +110,7 @@
  \let\newline\\
   \begingroup
   \parindent \z@
-  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=3.5cm]{seal_bw}
+  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
   \vskip 48\p@
   \vskip 3cm
   \begin{flushright}
