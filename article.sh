@@ -1,12 +1,15 @@
 #!/bin/bash
 # generate a zip with all necessary files to write an article
 
-mkdir seal_article_template;
-cp seal_article/example_article.tex seal_article_template/;
-cp seal_article/seal_article.cls seal_article_template/;
-cp seal.sty seal_article_template/;
-cp logos/seal_bw.* seal_article_template/;
-cp logos/seal_blue.* seal_article_template/;
-cp logos/logo_uzh.* seal_article_template/;
-zip -r seal_article_template.zip seal_article_template;
-rm -rf seal_article_template
+mkdir generated_article_template;
+
+cp hasel_article/example_article.tex generated_article_template/;
+cp hasel_article/hasel_article.cls generated_article_template/;
+cp hasel.sty generated_article_template/;
+
+cp logos/logo_hasel_bw.* generated_article_template/;
+cp logos/logo_hasel.* generated_article_template/;
+cp logos/logo_uzh.* generated_article_template/;
+
+zip -r generated_article_template.zip generated_article_template;
+rm -rf generated_article_template

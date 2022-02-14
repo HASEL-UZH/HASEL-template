@@ -1,8 +1,7 @@
 %%
-%% This is file `seal_thesis.cls'.
+%% This is file `hasel_thesis.cls'.
 %%
-%% This file is the seal thesis class files. All thesis at seal should
-%% be written using this style file.
+%% This file is the HASEL thesis class files.
 %%
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
@@ -20,12 +19,12 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_thesis}
+\ProvidesClass{hasel_thesis}
               [2011/09/16 v3.0e
- seal LaTeX thesis class]
+ HASEL LaTeX thesis class]
 
 \LoadClass[10pt,twoside,a4paper,fleqn]{book}
-\RequirePackage{seal}
+\RequirePackage{hasel}
 \RequirePackage{fancyhdr}
 
 %% paper dimensions and lengths
@@ -136,7 +135,7 @@
  \end{flushright}%
  \vskip 87\p@
  \parindent \z@
- \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
+ \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{logo_hasel_bw}
  \endgroup
  \clearpage\thispagestyle{empty}\cleardoublepage
   \thispagestyle{empty}
@@ -161,7 +160,7 @@
  \end{flushright}%
  \vskip 174\p@
  \parindent \z@
- \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
+ \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{logo_hasel_bw}
  \endgroup
  \clearpage\thispagestyle{empty}
  \normalfont

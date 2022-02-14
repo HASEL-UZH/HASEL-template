@@ -137,7 +137,7 @@
  \end{flushright}%
  \vskip 87\p@
  \parindent \z@
- \includegraphics[width=7cm]{logos/logo_inf}\hfill\includegraphics[width=5cm]{logos/seal_bw}
+ \includegraphics[width=7cm]{logos/logo_inf}\hfill\includegraphics[width=5cm]{logos/logo_hasel_bw}
  \endgroup
  \clearpage\thispagestyle{empty}\cleardoublepage
   \thispagestyle{empty}
@@ -162,7 +162,7 @@
  \end{flushright}%
  \vskip 174\p@
  \parindent \z@
- \includegraphics[width=7cm]{logos/logo_inf}\hfill\includegraphics[width=5cm]{logos/seal_bw}
+ \includegraphics[width=7cm]{logos/logo_inf}\hfill\includegraphics[width=5cm]{logos/logo_hasel_bw}
  \endgroup
  \clearpage\thispagestyle{empty}
  \normalfont

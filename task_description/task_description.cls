@@ -49,7 +49,7 @@
 
 \ProcessOptions\relax
 
-\LoadClass[10pt]{seal_article}
+\LoadClass[10pt]{hasel_article}
 
 \setlength{\topmargin}{-19mm}
 \setlength{\headheight}{19mm}

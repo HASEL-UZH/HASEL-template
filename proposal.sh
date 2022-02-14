@@ -1,13 +1,17 @@
 #!/bin/bash
 # generate a zip with all necessary files to write a research proposal
 
-mkdir seal_proposal_template;
-mkdir seal_proposal_template/sections;
-cp research_proposal/research_proposal.tex seal_proposal_template/;
-cp research_proposal/seal_phd_proposal.cls seal_proposal_template/;
-cp -r research_proposal/sections/ seal_proposal_template/sections/;
-#cp seal.sty seal_proposal_template/;
-cp logos/seal_bw.* seal_proposal_template/;
-cp logos/logo_uzh.* seal_proposal_template/;
-zip -r seal_proposal_template.zip seal_proposal_template;
-rm -rf seal_proposal_template
+mkdir generated_proposal_template;
+mkdir generated_proposal_template/sections;
+
+cp proposal/example_proposal.tex generated_proposal_template/;
+cp proposal/hasel_proposal.cls generated_proposal_template/;
+cp -r proposal/sections/ generated_proposal_template/sections/;
+
+#cp hasel.sty generated_proposal_template/;  #  not needed
+
+cp logos/logo_hasel_bw.* generated_proposal_template/;
+cp logos/logo_uzh.* generated_proposal_template/;
+
+zip -r generated_proposal_template.zip generated_proposal_template;
+rm -rf generated_proposal_template
