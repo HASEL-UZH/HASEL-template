@@ -4,9 +4,9 @@
 mkdir generated_proposal_template;
 mkdir generated_proposal_template/sections;
 
-cp proposal/example_proposal.tex generated_proposal_template/;
-cp proposal/hasel_proposal.cls generated_proposal_template/;
-cp -r proposal/sections/ generated_proposal_template/sections/;
+cp hasel_proposal/example_proposal.tex generated_proposal_template/;
+cp hasel_proposal/hasel_proposal.cls generated_proposal_template/;
+cp -r hasel_proposal/sections/ generated_proposal_template/sections/;
 
 #cp hasel.sty generated_proposal_template/;  #  not needed
 

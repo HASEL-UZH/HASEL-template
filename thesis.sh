@@ -3,8 +3,8 @@
 
 mkdir generated_thesis_template;
 
-cp thesis/example_thesis.tex generated_thesis_template/;
-cp thesis/hasel_thesis.cls generated_thesis_template/;
+cp hasel_thesis/example_thesis.tex generated_thesis_template/;
+cp hasel_thesis/hasel_thesis.cls generated_thesis_template/;
 cp hasel.sty generated_thesis_template/;
 
 cp logos/logo_uzh.* generated_thesis_template/;

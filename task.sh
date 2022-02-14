@@ -3,8 +3,8 @@
 
 mkdir generated_task_template;
 
-cp task_description/example.tex generated_task_template/;
-cp task_description/task_description.cls generated_task_template/;
+cp hasel_task/example_task.tex generated_task_template/;
+cp hasel_task/hasel_task.cls generated_task_template/;
 cp hasel_article/hasel_article.cls generated_task_template/;
 cp hasel.sty generated_task_template/;
 

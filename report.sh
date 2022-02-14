@@ -3,7 +3,7 @@
 
 mkdir generated_report_template;
 
-cp hasel_report/example_article.tex generated_report_template/;
+cp hasel_report/example_report.tex generated_report_template/;
 cp hasel_report/hasel_report.cls generated_report_template/;
 cp hasel.sty generated_report_template/;
 
