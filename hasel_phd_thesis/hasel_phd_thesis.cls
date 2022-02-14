@@ -1,8 +1,7 @@
 %%
-%% This is file `seal_thesis.cls'.
+%% This is file `hasel_phd_thesis.cls'.
 %%
-%% This file is the seal thesis class files. All thesis at seal should
-%% be written using this style file.
+%% This file is the HASEL thesis class files.
 %%
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
@@ -20,12 +19,12 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_thesis}
+\ProvidesClass{hasel_phd_thesis}
               [2009/01/09 v2.0e
- seal LaTeX thesis class]
+ HASEL LaTeX PhD thesis class]
 
 \LoadClass[12pt,twoside,a4paper,fleqn]{book}
-\RequirePackage{seal}
+\RequirePackage{hasel}
 \RequirePackage{fancyhdr}
 
 %% paper dimensions and lengths
