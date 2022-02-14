@@ -1,17 +1,19 @@
 #!/bin/bash
 # generate a zip with all necessary files to write a research proposal
 
-mkdir generated_proposal_template;
-mkdir generated_proposal_template/sections;
+FOLDER_NAME=generated_proposal_template
 
-cp hasel_proposal/example_proposal.tex generated_proposal_template/;
-cp hasel_proposal/hasel_proposal.cls generated_proposal_template/;
-cp -r hasel_proposal/sections/ generated_proposal_template/sections/;
+mkdir ${FOLDER_NAME};
+mkdir ${FOLDER_NAME}/sections;
 
-#cp hasel.sty generated_proposal_template/;  #  not needed
+cp hasel_proposal/example_proposal.tex ${FOLDER_NAME}/;
+cp hasel_proposal/hasel_proposal.cls ${FOLDER_NAME}/;
+cp -r hasel_proposal/sections/ ${FOLDER_NAME}/sections/;
 
-cp logos/logo_hasel_bw.* generated_proposal_template/;
-cp logos/logo_uzh.* generated_proposal_template/;
+#cp hasel.sty ${FOLDER_NAME}/;  #  not needed
 
-zip -r generated_proposal_template.zip generated_proposal_template;
-rm -rf generated_proposal_template
+cp logos/logo_hasel_bw.* ${FOLDER_NAME}/;
+cp logos/logo_uzh.* ${FOLDER_NAME}/;
+
+zip -r ${FOLDER_NAME}.zip ${FOLDER_NAME};
+rm -rf ${FOLDER_NAME}

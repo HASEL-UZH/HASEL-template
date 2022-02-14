@@ -112,9 +112,9 @@ Prof. Dr. Thomas Fritz
 {\phvtext \@date}
 
 \vfill
-\includegraphics[scale=.85]{logo_uzh}
+\includegraphics[width=4.5cm]{logo_uzh}
 \hspace{\fill}
-\includegraphics[scale=.66]{logo_hasel_bw}
+\includegraphics[width=5cm]{logo_hasel_bw}
 \clearpage
 \thispagestyle{empty}
 \vspace*{\fill}

@@ -1,15 +1,17 @@
 #!/bin/bash
 # generate a zip with all necessary files to write a task description
 
-mkdir generated_task_template;
+FOLDER_NAME=generated_task_template
 
-cp hasel_task/example_task.tex generated_task_template/;
-cp hasel_task/hasel_task.cls generated_task_template/;
-cp hasel_article/hasel_article.cls generated_task_template/;
-cp hasel.sty generated_task_template/;
+mkdir ${FOLDER_NAME};
 
-cp logos/logo_hasel_bw.* generated_task_template/;
-cp logos/logo_uzh.* generated_task_template/;
+cp hasel_task/example_task.tex ${FOLDER_NAME}/;
+cp hasel_task/hasel_task.cls ${FOLDER_NAME}/;
+cp hasel_article/hasel_article.cls ${FOLDER_NAME}/;
+cp hasel.sty ${FOLDER_NAME}/;
 
-zip -r generated_task_template.zip generated_task_template;
-rm -rf generated_task_template
+cp logos/logo_hasel_bw.* ${FOLDER_NAME}/;
+cp logos/logo_uzh.* ${FOLDER_NAME}/;
+
+zip -r ${FOLDER_NAME}.zip ${FOLDER_NAME};
+rm -rf ${FOLDER_NAME}
