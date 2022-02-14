@@ -1,5 +1,5 @@
 #!/bin/bash
-# generate a zip with all necessary files to write an article
+# generate a zip with all necessary files to write a report
 
 FOLDER_NAME=generated_report_template
 
