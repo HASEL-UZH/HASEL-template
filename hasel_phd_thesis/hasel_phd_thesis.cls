@@ -1,8 +1,7 @@
 %%
-%% This is file `seal_thesis.cls'.
+%% This is file `hasel_phd_thesis.cls'.
 %%
-%% This file is the seal thesis class files. All thesis at seal should
-%% be written using this style file.
+%% This file is the HASEL thesis class files.
 %%
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
@@ -20,30 +19,31 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_thesis}
-              [2011/09/16 v3.0e
- seal LaTeX thesis class]
+\ProvidesClass{hasel_phd_thesis}
+              [2009/01/09 v2.0e
+ HASEL LaTeX PhD thesis class]
 
-\LoadClass[10pt,twoside,a4paper,fleqn]{book}
-\RequirePackage{seal}
+\LoadClass[12pt,twoside,a4paper,fleqn]{book}
+\RequirePackage{hasel}
 \RequirePackage{fancyhdr}
 
 %% paper dimensions and lengths
-\setlength{\textwidth}{15cm}
-\setlength{\textheight}{21.3cm}
-\setlength{\evensidemargin}{-6mm}
-\addtolength{\oddsidemargin}{4mm}
+\setlength{\textwidth}{14.3cm}
+\setlength{\textheight}{20.3cm}
+\setlength{\evensidemargin}{6mm}
+\addtolength{\oddsidemargin}{7mm}
 \setlength{\topskip}{0pt}
 \setlength{\topsep}{2em}
 \setlength{\floatsep}{1.5em plus 2pt minus 2pt}
 \setlength{\textfloatsep}{2.5em plus 2pt minus 4pt}
 \setlength{\intextsep}{2em}
 \setlength{\doublerulesep}{0pt}
+\setlength{\headheight}{15pt}
 
 %% header/footer
 \pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ \ #1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection \ \ #1}}
+\renewcommand{\chaptermark}[1]{\markboth{\small\chaptername\ \thechapter.\ \ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\small\thesection \ \ #1}}
 \fancyhf{}
 \fancyhead[LE,RO]{\phvbold\small\thepage}
 \fancyhead[LO]{\sffamily\rightmark}
@@ -111,32 +111,32 @@
   \fontfamily{phv}\selectfont
   \begin{flushright}%
     \vspace*{50\p@}
-    {\fontsize{20}{0}\selectfont \@thesisType}
+    {\fontsize{24}{0}\selectfont \@thesisType}
     \vskip -9\p@
     \vbox{\hrule height0.25pt width\textwidth}
     \vskip -2\p@
     {\fontsize{9}{0}\selectfont \@date}
     \vskip 20\p@
-    {\fontfamily{phv}\fontsize{40}{44}\selectfont\bfseries \@title\par}
+    {\fontfamily{phv}\fontsize{48}{0}\selectfont\bfseries \@title}
     \ifsubtitle
       \vskip -12\p@  
 	\parbox{\textwidth}{
 	\begin{flushright}
-		\fontfamily{phv}\fontsize{20}{30}\selectfont \@subtitle
+		\fontfamily{phv}\fontsize{24}{30}\selectfont \@subtitle
 	\end{flushright}}
     \fi
     \vfill
-    {\fontsize{20}{0}\selectfont\bfseries \@author}
+    {\fontsize{24}{0}\selectfont\bfseries \@author}
     \vskip 2\p@
-    {\fontsize{8}{0}\selectfont of \@home,\ \@country \ (\@legi)}
+    {\fontsize{9}{0}\selectfont of \@home,\ \@country \ (\@legi)}
     \vskip 35\p@
     {\fontsize{10}{0}\selectfont\bfseries supervised by}
     \vskip 4\p@
-    {\fontsize{11}{0}\selectfont \@prof\\[2\p@] \@assistent}
+    {\fontsize{12}{0}\selectfont \@prof\\[2\p@] \@assistent}
  \end{flushright}%
  \vskip 87\p@
  \parindent \z@
- \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
+ \includegraphics[width=7cm]{logos/logo_inf}\hfill\includegraphics[width=5cm]{logos/logo_hasel_bw}
  \endgroup
  \clearpage\thispagestyle{empty}\cleardoublepage
   \thispagestyle{empty}
@@ -144,24 +144,24 @@
   \fontfamily{phv}\selectfont
   \begin{flushright}%
     \vspace*{50\p@}
-    {\fontsize{20}{0}\selectfont \@thesisType}
+    {\fontsize{24}{0}\selectfont \@thesisType}
     \vskip -9\p@
     \vbox{\hrule height0.25pt width\textwidth}
     \vskip 31\p@
-    {\fontsize{40}{44}\selectfont\bfseries \@title\par}
+    {\fontsize{48}{0}\selectfont\bfseries \@title}
     \ifsubtitle
      \vskip -12\p@  
 	\parbox{\textwidth}{
 	\begin{flushright}
-		\fontfamily{phv}\fontsize{20}{30}\selectfont \@subtitle
+		\fontfamily{phv}\fontsize{24}{30}\selectfont \@subtitle
 	\end{flushright}}
     \fi
     \vfill
-    {\fontsize{20}{0}\selectfont\bfseries \@author}
+    {\fontsize{24}{0}\selectfont\bfseries \@author}
  \end{flushright}%
  \vskip 174\p@
  \parindent \z@
- \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
+ \includegraphics[width=7cm]{logos/logo_inf}\hfill\includegraphics[width=5cm]{logos/logo_hasel_bw}
  \endgroup
  \clearpage\thispagestyle{empty}
  \normalfont
@@ -215,20 +215,41 @@
                     \fi}
 
 \def\@makechapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedright
+%  \vspace*{50\p@}%
+\vspace*{-1cm}
+  { \parindent \z@ \raggedright
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
-        \hfill{\fontfamily{phv}\fontsize{18}{0}\selectfont\bfseries \@chapapp\space \thechapter}%
+        %\hfill{\fontfamily{phv}\fontsize{24}{0}\selectfont\bfseries \@chapapp\space \thechapter}%
+        %\parbox[b]{0.85\textwidth}{
+        	%\begin{flushleft}
+        	%	\reset@font {\fontfamily{phv}\fontsize{24}{0}\selectfont\bfseries #1}
+        	%\end{flushleft}
+        %}
+        %\hfill
+        %\parbox[b]{0.14\textwidth}{
+        	%\begin{flushright}
+        	%	\reset@font {\fontfamily{phv}\fontsize{96}{0}\selectfont\bfseries\thechapter}
+        	%\end{flushright}
+        %}
+       	\begin{flushright}
+       		\reset@font {\fontfamily{phv}\fontsize{96}{0}\selectfont\bfseries\thechapter}
+       	\end{flushright}        
+        \hrule height0.25pt width\textwidth        
+        \begin{flushright}
+        		\reset@font {\fontfamily{phv}\bfseries\fontsize{28}{24}\selectfont #1\par}
+       	\end{flushright}
+        
+        %\par\nobreak
+        %\vskip -10mm
+        %\vbox{\hrule height0.25pt width\textwidth}
         \par\nobreak
-        \vbox{\hrule height0.25pt width\textwidth}
-        \par\nobreak
-        \vskip 15\p@
+%        \vskip 15\p@
       \fi
     \fi
     \interlinepenalty\@M
-    \flushright{\fontfamily{phv}\fontsize{28}{30}\selectfont\bfseries #1\par}\par\nobreak
-    \vskip 40\p@
+    %\flushright{\fontfamily{phv}\fontsize{26}{0}\selectfont\bfseries #1}\par\nobreak
+%    \vskip 40\p@
   }}
 \def\@schapter#1{\if@twocolumn
                    \@topnewpage[\@makeschapterhead{#1}]%
@@ -241,22 +262,22 @@
   {\parindent \z@ \raggedright
     \interlinepenalty\@M
     \vbox{\hrule height0.4pt width\textwidth}
-    \flushright{\fontfamily{phv}\fontsize{32}{34}\selectfont\bfseries #1\par}\par\nobreak
+    \flushright{\fontfamily{phv}\fontsize{28}{0}\selectfont\bfseries #1}\par\nobreak
     \vskip 40\p@
   }}
 
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-3.8ex \@plus -1ex \@minus -.2ex}%
                                    {2.3ex \@plus.2ex}%
-                                   {\phvbold\LARGE}}
+                                   {\phvbold\Large}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                      {-3.3ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\phvbold\Large}}
+                                     {\phvbold\large}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                                      {-3.3ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\phvbold\large}}
+                                     {\phvbold\normalsize}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
                                     {3.25ex \@plus1ex \@minus.2ex}%
                                     {-1em}%
@@ -304,6 +325,35 @@
 
 \newenvironment{acknowledgements}{%
   \chapter*{Acknowledgements}}{}
+
+
+% The paperabstract environment is used for the abstract of a chapter.
+%\newenvironment{paperabstract}{%
+%	\list{}{\leftmargin\rightmargin}%
+%	\item%
+%	\relax%
+%	\rmfamily\small\singlespacing\textbf{Abstract.}\xspace%
+%}{%
+%	\endlist%
+%}
+
+\newenvironment{paperabstract}{%
+  \section*{Abstract}}
+{}
+
+\newenvironment{paperdetails}{%
+	\begin{flushright}
+	\phvbold\fontsize{10}{10}\selectfont
+}
+{
+	\par
+	\end{flushright}
+}
+
+%\newenvironment{paperdetails}
+%{\begin{flushright}
+%	\itshape}
+%{\end{flushright}}
 
 
 \endinput

@@ -1,6 +1,6 @@
 
 \NeedsTeXFormat{LaTeX2e} 
-\ProvidesClass{task_description}[2011/09/20 Task Description Template Class v3.0]
+\ProvidesClass{hasel_task}[2011/09/20 Task Template Class v3.0]
 
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -49,7 +49,7 @@
 
 \ProcessOptions\relax
 
-\LoadClass[10pt]{seal_article}
+\LoadClass[10pt]{hasel_article}
 
 \setlength{\topmargin}{-19mm}
 \setlength{\headheight}{19mm}

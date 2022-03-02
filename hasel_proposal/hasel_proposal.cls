@@ -1,4 +1,4 @@
-% SEAL PROPOSAL DOCUMENT CLASS -- version 2.0 (20-Sep-2011)
+% HASEL PROPOSAL DOCUMENT CLASS -- version 2.0 (20-Sep-2011)
 % Beat Fluri, Matthias Hert LaTeX2e support for Special Articles
 %
 %%
@@ -19,8 +19,8 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_phd_proposal}[2011/09/20 v2.0
-LaTeX document class for seal style phd proposals]
+\ProvidesClass{hasel_proposal}[2011/09/20 v2.0
+LaTeX document class for HASEL style phd proposals]
 
 \LoadClass[10pt,a4paper,fleqn]{article}
 \RequirePackage[english]{babel}
@@ -64,12 +64,12 @@ LaTeX document class for seal style phd proposals]
 %% end font definitions
 
 %% heading
-\def\ps@sealheadings{\let\@mkboth\@gobbletwo
+\def\ps@haselheadings{\let\@mkboth\@gobbletwo
    \def\@oddfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
    \def\@evenfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
    \let\@evenhead\@empty\let\@oddhead\@empty}
 
-\ps@sealheadings
+\ps@haselheadings
 %% end heading
 
 %% titlepage
@@ -112,9 +112,9 @@ Prof. Dr. Thomas Fritz
 {\phvtext \@date}
 
 \vfill
-\includegraphics[scale=.85]{logo_uzh}
+\includegraphics[width=4.5cm]{logo_uzh}
 \hspace{\fill}
-\includegraphics[scale=.66]{seal_bw}
+\includegraphics[width=5cm]{logo_hasel_bw}
 \clearpage
 \thispagestyle{empty}
 \vspace*{\fill}

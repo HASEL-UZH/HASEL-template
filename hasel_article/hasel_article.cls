@@ -1,4 +1,4 @@
-% SEAL ARTICLE DOCUMENT CLASS -- version 3.0 (16-Sep-2011)
+% HASEL ARTICLE DOCUMENT CLASS -- version 3.0 (16-Sep-2011)
 % Beat Fluri, Matthias Hert LaTeX2e support for Special Articles
 %
 %%
@@ -19,11 +19,11 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_article}[2011/09/16 v3.0
-^^J LaTeX document class for seal style articles]
+\ProvidesClass{hasel_article}[2011/09/16 v3.0
+^^J LaTeX document class for HASEL style articles]
 
 \LoadClass[10pt,a4paper,fleqn]{article}
-\RequirePackage{seal}
+\RequirePackage{hasel}
 
 %% paper dimensions and lengths
 \setlength{\textwidth}{15cm}
@@ -39,11 +39,11 @@
 \setcounter{secnumdepth}{2}
 
 %% header/footer
-\def\ps@sealheadings{\let\@mkboth\@gobbletwo
+\def\ps@haselheadings{\let\@mkboth\@gobbletwo
    \def\@oddfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
    \def\@evenfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
    \let\@evenhead\@empty\let\@oddhead\@empty}
-\ps@sealheadings
+\ps@haselheadings
 
 %% section redefinitions
 \renewcommand\section{\@startsection{section}{1}{\z@}%
@@ -90,7 +90,7 @@
   \begingroup
   
   \parindent \z@
-  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
+  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{logo_hasel_bw}
   \vskip 48\p@
   \vskip 3cm
   \begin{flushright}
@@ -110,7 +110,7 @@
  \let\newline\\
   \begingroup
   \parindent \z@
-  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
+  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{logo_hasel_bw}
   \vskip 48\p@
   \vskip 3cm
   \begin{flushright}
@@ -127,5 +127,3 @@
 }
 
 \endinput
-
-%end of seal_article.cls

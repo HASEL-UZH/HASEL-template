@@ -1,12 +1,17 @@
 #!/bin/bash
 # generate a zip with all necessary files to write a thesis
 
-mkdir seal_thesis_template;
-cp seal_thesis/example_thesis.tex seal_thesis_template/;
-cp seal_thesis/seal_thesis.cls seal_thesis_template/;
-cp seal.sty seal_thesis_template/;
-cp logos/seal_bw.* seal_thesis_template/;
-cp logos/logo_uzh.* seal_thesis_template/;
-cp logos/seal_blue.* seal_thesis_template/;
-zip -r seal_thesis_template.zip seal_thesis_template;
-rm -rf seal_thesis_template
+FOLDER_NAME=generated_thesis_template
+
+mkdir ${FOLDER_NAME};
+
+cp hasel_thesis/example_thesis.tex ${FOLDER_NAME}/;
+cp hasel_thesis/hasel_thesis.cls ${FOLDER_NAME}/;
+cp hasel.sty ${FOLDER_NAME}/;
+
+cp logos/logo_uzh.* ${FOLDER_NAME}/;
+cp logos/logo_hasel_bw.* ${FOLDER_NAME}/;
+cp logos/logo_hasel.* ${FOLDER_NAME}/;
+
+zip -r ${FOLDER_NAME}.zip ${FOLDER_NAME};
+rm -rf ${FOLDER_NAME}

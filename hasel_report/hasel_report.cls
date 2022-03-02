@@ -1,4 +1,4 @@
-	% SEAL REPORT DOCUMENT CLASS -- version 2.0 (20-Sep-2011)
+	% HASEL REPORT DOCUMENT CLASS -- version 2.0 (20-Sep-2011)
 % Beat Fluri, Matthias Hert LaTeX2e support for Special Articles
 %
 %%
@@ -19,8 +19,8 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{seal_report}[2011/09/20 v2.0
-^^J LaTeX document class for seal style articles]
+\ProvidesClass{hasel_report}[2011/09/20 v2.0
+^^J LaTeX document class for HASEL style articles]
 
 \LoadClass[10pt,a4paper]{article}
 \RequirePackage{graphicx}
@@ -49,12 +49,12 @@
 
 \setcounter{secnumdepth}{2}
 
-\def\ps@sealheadings{\let\@mkboth\@gobbletwo
+\def\ps@haselheadings{\let\@mkboth\@gobbletwo
    \def\@oddfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
    \def\@evenfoot{\hfil\fontfamily{phv}\selectfont\small\bfseries\thepage}
    \let\@evenhead\@empty\let\@oddhead\@empty}
 
-\ps@sealheadings
+\ps@haselheadings
 
 \renewcommand\section{\@startsection{section}{1}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
@@ -128,7 +128,7 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
   \vspace*{-3cm}
   \begingroup
   \parindent \z@
-  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{seal_bw}
+  \includegraphics[width=4.5cm]{logo_uzh}\hfill\includegraphics[width=5cm]{logo_hasel_bw}
   \vskip 48\p@
   \vskip 3cm
   \hfill{\fontfamily{phv}\selectfont\bfseries\Huge\@title}
@@ -144,7 +144,7 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
  \let\newline\\
   \begingroup
   \parindent \z@
-  \includegraphics[width=4cm]{logo_uzh}\hfill\includegraphics[width=4.5cm]{seal_bw}
+  \includegraphics[width=4cm]{logo_uzh}\hfill\includegraphics[width=4.5cm]{logo_hasel_bw}
   \vskip 45\p@
   \hfill{\fontfamily{phv}\selectfont\bfseries\Huge\@title}
   \\[-5\p@]
@@ -156,5 +156,3 @@ You should not use \verb|\subparagraph| with this class.\vskip0.5cm}
 }
 
 \endinput
-
-%end of seal_article.cls
