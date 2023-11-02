@@ -65,7 +65,7 @@
 \def\prof#1{\gdef\@prof{#1}}
 \def\assistent#1{\gdef\@assistent{#1}}
 \def\email#1{\gdef\@email{#1}}
-\def\url#1{\gdef\@url{#1}}
+\def\repourl#1{\gdef\@repourl{#1}}
 \def\begindate#1{\gdef\@begindate{#1}}
 \def\enddate#1{\gdef\@enddate{#1}}
 
@@ -79,7 +79,7 @@
 \gdef\@prof{No Professor given}
 \gdef\@assistent{No Assisten(s) given}
 \gdef\@email{missing}
-\gdef\@url{missing}
+\gdef\@repourl{missing}
 \gdef\@begindate{No Begin Date given}
 \gdef\@enddate{No End Date given}
 \def\missing{missing}
@@ -88,8 +88,8 @@
 \subtitletrue
 \newif\ifemail
 \emailtrue
-\newif\ifurl
-\urltrue
+\newif\ifrepourl
+\repourltrue
 
 \newlength{\normaltopmargin}
 \setlength\normaltopmargin{\topmargin}
@@ -102,8 +102,8 @@
   \ifx\@email\missing
     \emailfalse
   \fi
-  \ifx\@url\missing
-    \urlfalse
+  \ifx\@repourl\missing
+    \repourlfalse
   \fi
   \newpage
   \thispagestyle{empty}
@@ -171,8 +171,8 @@
  \begin{tabular}{ll}
    {\bf \@thesisType} & \\[4\p@]
    {\bf Author:} & \@author \ifemail , \@email\fi\\[4\p@]
-   \ifurl
-   {\bf URL:} & \@url \\[4\p@]
+   \ifrepourl
+   {\bf URL:} & \@repourl \\[4\p@]
    \fi
    {\bf Project period:} & \@begindate \ - \@enddate \\[4\p@]
  \end{tabular}
