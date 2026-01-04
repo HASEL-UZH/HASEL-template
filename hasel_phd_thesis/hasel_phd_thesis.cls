@@ -77,7 +77,7 @@
 \gdef\@country{No Country given}
 \gdef\@legi{No Legi given}
 \gdef\@prof{No Professor given}
-\gdef\@assistent{No Assisten(s) given}
+\gdef\@assistent{No Assistant(s) given}
 \gdef\@email{missing}
 \gdef\@repourl{missing}
 \gdef\@begindate{No Begin Date given}
